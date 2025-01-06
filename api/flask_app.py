@@ -13,7 +13,39 @@ def home():
     return f"""
         <html>
             <head>
-                <title>Flask App with Dynamic Time</title>
+                <title>Responsive Flask App</title>
+                <style>
+                    body {{
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        min-height: 100vh;
+                        background: linear-gradient(to bottom, #ece9e6, #ffffff);
+                    }}
+                    h1 {{
+                        color: #333;
+                        font-size: 2rem;
+                        margin-bottom: 20px;
+                    }}
+                    p {{
+                        color: #555;
+                        font-size: 1.2rem;
+                        margin: 10px 0;
+                    }}
+                    @media (max-width: 600px) {{
+                        h1 {{
+                            font-size: 1.5rem;
+                        }}
+                        p {{
+                            font-size: 1rem;
+                        }}
+                    }}
+                </style>
                 <script>
                     function updateTime() {{
                         const currentTimeElement = document.getElementById('current-time');
@@ -32,8 +64,8 @@ def home():
                     setInterval(updateTime, 1000);
                 </script>
             </head>
-            <body style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
-                <h1>Flask App with Dynamic Time</h1>
+            <body>
+                <h1>Responsive Flask App with Dynamic Time</h1>
                 <p><strong>Date and Time (UTC):</strong> <span id="current-time">{initial_time.split('T')[0]} {initial_time.split('T')[1][:-1]}</span></p>
                 <p><strong>ISO Timestamp:</strong> <span id="timestamp">{initial_time}</span></p>
             </body>
