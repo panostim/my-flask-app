@@ -18,7 +18,7 @@ def home():
                     body {{
                         font-family: Arial, sans-serif;
                         margin: 0;
-                        padding: 0;
+                        padding: 100;
                         display: flex;
                         flex-direction: column;
                         justify-content: top;
