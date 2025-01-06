@@ -7,13 +7,20 @@ CORS(app)
 
 @app.route("/api/timestamp", methods=["GET"])
 def get_timestamp():
-    now = datetime.utcnow()
-    return jsonify({"timestamp": now.isoformat() + "Z"})
+    try:
+        now = datetime.utcnow()
+        return jsonify({"timestamp": now.isoformat() + "Z"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 # The Vercel serverless environment requires this handler
 def handler(event, context):
     from flask import request
     return app.wsgi_app(event, context)
+
+
+
+
 
 
 
