@@ -16,6 +16,5 @@ def get_timestamp():
     return jsonify({"timestamp": now.isoformat() + "Z"})
 
 # Required for Vercel's serverless environment
-def handler(event, context):
-    from flask import request
-    return app.wsgi_app(event, context)
+# Rename this to app as it is automatically detected by Vercel
+app = app
