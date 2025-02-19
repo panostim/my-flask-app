@@ -1,4 +1,4 @@
-A small, responsive and dynamic appl displaying current time, date and timestamp.
+A small, responsive and dynamic app displaying current time, date and timestamp.
 
 The app is using Python Flask to create an API for the backend (e.g. current timestamp).
 
