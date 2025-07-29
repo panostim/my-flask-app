@@ -1,14 +1,18 @@
 from flask import Flask
 from flask_cors import CORS
 from datetime import datetime
+import os
 import requests
 
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
-API_KEY = "4d4fb0b31ee1cf8263a476b0b6c82341"
 CITIES = ["New York", "London", "Athens", "New Delhi"]
+
+# API key for OpenWeather. The value can be overridden by setting the
+# OPENWEATHER_API_KEY environment variable.
+API_KEY = os.getenv("OPENWEATHER_API_KEY", "4d4fb0b31ee1cf8263a476b0b6c82341")
 
 def get_weather(city):
     """Fetch weather information for a city using OpenWeather API."""
@@ -39,7 +43,7 @@ def home():
                     body {{
                         font-family: Arial, sans-serif;
                         margin: 0;
-                        padding: 100;
+                        padding: 100px;
                         display: flex;
                         flex-direction: column;
                         justify-content: top;

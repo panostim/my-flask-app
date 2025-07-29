@@ -25,5 +25,6 @@ https://date-time-ten.vercel.app/
    ```
 4. Open `http://localhost:5000` in your browser to view the app.
 
-The OpenWeather API key is already embedded in `api/flask_app.py`. If you wish to
-use your own key, edit `API_KEY` at the top of that file.
+The server looks for an environment variable named `OPENWEATHER_API_KEY` for the
+OpenWeather API key. A default key is included in the code but setting this
+variable allows you to override it with your own key.
