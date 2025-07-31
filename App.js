@@ -55,11 +55,6 @@ function App() {
         <div className="app">
             <div className="background">
                 <div className="gradient-overlay"></div>
-                <div className="floating-shapes">
-                    <div className="shape shape-1"></div>
-                    <div className="shape shape-2"></div>
-                    <div className="shape shape-3"></div>
-                </div>
             </div>
             
             <div className="container">

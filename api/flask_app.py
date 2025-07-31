@@ -92,49 +92,7 @@ def home():
                         50% {{ opacity: 0.6; }}
                     }}
 
-                    .floating-shapes {{
-                        position: fixed;
-                        width: 100%;
-                        height: 100%;
-                        overflow: hidden;
-                        z-index: -1;
-                    }}
 
-                    .shape {{
-                        position: absolute;
-                        background: rgba(255, 255, 255, 0.1);
-                        border-radius: 50%;
-                        animation: float 6s ease-in-out infinite;
-                    }}
-
-                    .shape-1 {{
-                        width: 80px;
-                        height: 80px;
-                        top: 20%;
-                        left: 10%;
-                        animation-delay: 0s;
-                    }}
-
-                    .shape-2 {{
-                        width: 120px;
-                        height: 120px;
-                        top: 60%;
-                        right: 10%;
-                        animation-delay: 2s;
-                    }}
-
-                    .shape-3 {{
-                        width: 60px;
-                        height: 60px;
-                        bottom: 20%;
-                        left: 20%;
-                        animation-delay: 4s;
-                    }}
-
-                    @keyframes float {{
-                        0%, 100% {{ transform: translateY(0px) rotate(0deg); }}
-                        50% {{ transform: translateY(-20px) rotate(180deg); }}
-                    }}
 
                     .container {{
                         max-width: 1200px;
@@ -427,11 +385,6 @@ def home():
             </head>
             <body>
                 <div class="background-overlay"></div>
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
-                </div>
                 
                 <div class="container">
                     <header class="header">
